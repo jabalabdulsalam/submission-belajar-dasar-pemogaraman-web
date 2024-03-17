@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* Navigation Bar */
+header {
+    width: 100%;
+    max-width: 1200px;
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+}
+
+header .logo img {
+    width: 250px;
+}
+
+header ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+header li:hover a {
+    color: #ffd524;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Main */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.container .header .title {
+    margin-block: 1rem;
+    font-size: 3.5rem;
+}
+
+.container .header p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+.container .header button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+    background-color: #d90429;
+    font-family: 'montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+.container .header button:hover {
+    border: 3px solid #ffd524;
+    background-color: transparent;
+    color: #ffd524;
+}
+
+.container .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .image img {
+    width: 350px;
+    min-width: 300px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Project */
+.container .header-project .title {
+    margin-block: 1rem;
+    font-size: 3.5rem;
+}
+
+.container .header-project p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+/* Aside - Profile Jabal Abdul Salam */
+aside .container {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container .profile-author{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container .profile-author header {
+    text-align: center;
+}
+
+.container .profile-author img {
+    width: 200px;
+
+}
+
+.container .profile-author .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    align-items: center;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #d90429;
+    text-align: center;
+}
+
+/* Medium device (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+
+    /* Navigation Bar */
+    header {
+        flex-direction: column;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+
+    /* Beranda dan Profile */
+    main {
+        padding: 1rem 3rem;
+    }
+
+    main .container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .container .header .title {
+        font-size: 3rem;
+    }
+
+    main .container .header p {
+        font-size: 1rem;
+    }
+
+    main .container .image {
+        order: -1;
+    }
+
+    /* Project */
+    main .header-project{
+        order: -1;
+    }
+
+    main .container .header-project  .title {
+        font-size: 3rem;
+    }
+
+    main .container .header-project  p {
+        font-size: 1rem;
+    }
+}
